@@ -10,7 +10,7 @@ import Foundation
 import Moya
 import HandyJSON
 import RxSwift
-extension Response{
+public extension Response{
     func mapToModel<T:HandyJSON>(_ type:T.Type)->T{
         let jsonString = String.init(data: data, encoding: String.Encoding.utf8)
         return T.deserialize(from: jsonString) ?? T.init()
@@ -18,7 +18,7 @@ extension Response{
 }
 
 
-extension PrimitiveSequence where TraitType == SingleTrait , ElementType == Response{
+public extension PrimitiveSequence where TraitType == SingleTrait , ElementType == Response{
     func mapResonseToObject<T:HandyJSON>(type:T.Type) -> Single<T> {
         return flatMap { response -> Single<T> in
             return Single.just(response.mapToModel(T.self))
