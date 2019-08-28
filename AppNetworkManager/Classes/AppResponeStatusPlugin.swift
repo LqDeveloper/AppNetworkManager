@@ -9,26 +9,23 @@
 import Foundation
 import Moya
 
-public protocol AppResponeStatusDelegate:AnyObject{
-    func didReceiveResponse(statusCode: Int,urlString:String)
-}
 
 public class AppResponeStatusPlugin:PluginType{
-    weak var delegate:AppResponeStatusDelegate?
+    public typealias AppResponeStatusClosure = (_ statusCode: Int, _ target: TargetType) -> Void
+    let statusClosure: AppResponeStatusClosure
     
-    public init(delegate:AppResponeStatusDelegate) {
-        self.delegate = delegate
+    public init(statusClosure:@escaping AppResponeStatusClosure) {
+        self.statusClosure = statusClosure
     }
     
     public func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
-        let urlString = "\(target.baseURL.absoluteString)\(target.path)"
         switch result {
         case .success(let response):
-            delegate?.didReceiveResponse(statusCode: response.statusCode, urlString: urlString)
+            statusClosure(response.statusCode,target)
         case .failure(let error):
             switch error{
             case .statusCode(let response):
-                delegate?.didReceiveResponse(statusCode: response.statusCode, urlString: urlString)
+                statusClosure(response.statusCode,target)
             default:break
             }
         }
