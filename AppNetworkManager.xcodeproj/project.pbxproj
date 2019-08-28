@@ -132,7 +132,7 @@
 		516BA68C23068BF400B78A5D /* AppNetworkManager */ = {
 			isa = PBXGroup;
 			children = (
-				516BA6BB23068C0100B78A5D /* Clesses */,
+				516BA6BB23068C0100B78A5D /* Classes */,
 				516BA68D23068BF400B78A5D /* AppDelegate.swift */,
 				516BA68F23068BF400B78A5D /* ViewController.swift */,
 				516BA69123068BF400B78A5D /* Main.storyboard */,
@@ -161,7 +161,7 @@
 			path = AppNetworkManagerUITests;
 			sourceTree = "<group>";
 		};
-		516BA6BB23068C0100B78A5D /* Clesses */ = {
+		516BA6BB23068C0100B78A5D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				516BA6BC23068C1500B78A5D /* NetworkUtils.swift */,
@@ -169,7 +169,7 @@
 				5136E82823152EA500E517A7 /* AppResponeStatusPlugin.swift */,
 				5136E82A231533D600E517A7 /* AppNetworkActivityPlugin.swift */,
 			);
-			path = Clesses;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		5E3BF0B5DDF36425ED79A8CF /* Pods */ = {

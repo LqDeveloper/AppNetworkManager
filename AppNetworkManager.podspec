@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
   spec.summary      = 'iOS 网络请求工具类'
   spec.homepage     = 'https://github.com/lqIphone/AppNetworkManager'
   spec.source       = { :git => 'https://github.com/lqIphone/AppNetworkManager.git', :tag => '1.0.0' }
-  spec.source_files  = "AppUtils/**/*.swift"
+  spec.source_files  = "AppNetworkManager/Classes/*.swift"
   spec.requires_arc = true
   spec.platform     = :ios, "9.0"
   spec.swift_version = '4.2'
