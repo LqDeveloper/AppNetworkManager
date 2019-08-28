@@ -19,7 +19,6 @@ public enum AppNetworkStatus {
 }
 
 open class AppNetworkManager {
-    public static let shared = AppNetworkManager()
     public static let NetworkChange = Notification.Name(rawValue:"MSNetworkChange")
     private  var reachabilityManager:NetworkReachabilityManager?
     public var networkStatus:AppNetworkStatus = .app_unknown
