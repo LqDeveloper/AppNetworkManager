@@ -6,27 +6,31 @@
 //  Copyright © 2019 williamoneilchina. All rights reserved.
 //
 
+
 import Foundation
 import Result
 import Moya
 
+public protocol AppResponeStatusDelegate:AnyObject{
+    func didReceiveResponse(statusCode: Int,urlString:String,target:TargetType)
+}
 
-public class AppResponeStatusPlugin:PluginType{
-    public typealias AppResponeStatusClosure = (_ statusCode: Int, _ target: TargetType) -> Void
-    let statusClosure: AppResponeStatusClosure
+public final class AppResponeStatusPlugin:PluginType{
+    weak var delegate:AppResponeStatusDelegate?
     
-    public init(statusClosure:@escaping AppResponeStatusClosure) {
-        self.statusClosure = statusClosure
+    public init(delegate:AppResponeStatusDelegate) {
+        self.delegate = delegate
     }
     
     public func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
+        let urlString = "\(target.baseURL.absoluteString)\(target.path)"
         switch result {
         case .success(let response):
-            statusClosure(response.statusCode,target)
+            delegate?.didReceiveResponse(statusCode: response.statusCode, urlString: urlString,target: target)
         case .failure(let error):
             switch error{
             case .statusCode(let response):
-                statusClosure(response.statusCode,target)
+                delegate?.didReceiveResponse(statusCode: response.statusCode, urlString: urlString,target: target)
             default:break
             }
         }

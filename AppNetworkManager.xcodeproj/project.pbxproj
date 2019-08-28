@@ -18,6 +18,7 @@
 		516BA6AE23068BF500B78A5D /* AppNetworkManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516BA6AD23068BF500B78A5D /* AppNetworkManagerUITests.swift */; };
 		516BA6BD23068C1500B78A5D /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516BA6BC23068C1500B78A5D /* NetworkUtils.swift */; };
 		51A4DA9C23165B43007B6D3D /* AppResponeStatusPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A4DA9A23165B43007B6D3D /* AppResponeStatusPlugin.swift */; };
+		51D4D2272316857C002F3B54 /* AppNetworkActivityPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D4D2262316857C002F3B54 /* AppNetworkActivityPlugin.swift */; };
 		8393591E550EA5DF560CDBF4 /* Pods_AppNetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87CF5589871BAF675A8A6455 /* Pods_AppNetworkManager.framework */; };
 		D9D5BBD2FB306105418D9780 /* Pods_AppNetworkManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA90D634826F5E09A0785E19 /* Pods_AppNetworkManagerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		516BA6AF23068BF500B78A5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		516BA6BC23068C1500B78A5D /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		51A4DA9A23165B43007B6D3D /* AppResponeStatusPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppResponeStatusPlugin.swift; sourceTree = "<group>"; };
+		51D4D2262316857C002F3B54 /* AppNetworkActivityPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNetworkActivityPlugin.swift; sourceTree = "<group>"; };
 		72188D67EC14E369977712F2 /* Pods_AppNetworkManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNetworkManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BC7AB0C06A9F2E6D488F8D /* Pods-AppNetworkManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppNetworkManager.release.xcconfig"; path = "Target Support Files/Pods-AppNetworkManager/Pods-AppNetworkManager.release.xcconfig"; sourceTree = "<group>"; };
 		87CF5589871BAF675A8A6455 /* Pods_AppNetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppNetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +167,7 @@
 				516BA6BC23068C1500B78A5D /* NetworkUtils.swift */,
 				5136E82623152C1300E517A7 /* NetworkManager.swift */,
 				51A4DA9A23165B43007B6D3D /* AppResponeStatusPlugin.swift */,
+				51D4D2262316857C002F3B54 /* AppNetworkActivityPlugin.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				516BA69023068BF400B78A5D /* ViewController.swift in Sources */,
 				516BA6BD23068C1500B78A5D /* NetworkUtils.swift in Sources */,
 				516BA68E23068BF400B78A5D /* AppDelegate.swift in Sources */,
+				51D4D2272316857C002F3B54 /* AppNetworkActivityPlugin.swift in Sources */,
 				51A4DA9C23165B43007B6D3D /* AppResponeStatusPlugin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
