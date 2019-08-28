@@ -24,10 +24,6 @@ open class AppNetworkManager {
     private  var reachabilityManager:NetworkReachabilityManager?
     public var networkStatus:AppNetworkStatus = .app_unknown
     private var isStartNetwork = false
-    
-    public init() {
-        
-    }
 }
 
 
