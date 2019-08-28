@@ -8,12 +8,12 @@
 
 Pod::Spec.new do |spec|
   spec.name         = 'AppNetworkManager'
-  spec.version      = '1.0.1'
+  spec.version      = '1.0.2'
   spec.license      = 'MIT'
   spec.author       = { "Quan Li" => "1083099465@qq.com" }
   spec.summary      = 'iOS 网络请求工具类'
   spec.homepage     = 'https://github.com/lqIphone/AppNetworkManager'
-  spec.source       = { :git => 'https://github.com/lqIphone/AppNetworkManager.git', :tag => '1.0.1' }
+  spec.source       = { :git => 'https://github.com/lqIphone/AppNetworkManager.git', :tag => '1.0.2' }
   spec.source_files  = "AppNetworkManager/Classes/*.swift"
   spec.requires_arc = true
   spec.platform     = :ios, "9.0"
