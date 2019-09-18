@@ -17,10 +17,10 @@ Pod::Spec.new do |spec|
   spec.source_files  = "AppNetworkManager/Classes/*.swift"
   spec.requires_arc = true
   spec.platform     = :ios, "9.0"
-  spec.swift_version = '4.2'
+  spec.swift_version = '5.0'
   spec.framework  = "Security"
-  spec.dependency 'HandyJSON', '~> 5.0.0'
-  spec.dependency 'Moya/RxSwift' , '~> 13.0.1'
-  spec.dependency 'RxSwift','~>4.5.0'
-  spec.dependency 'RxCocoa','~>4.5.0'
+  spec.dependency 'HandyJSON'
+  spec.dependency 'Moya/RxSwift'
+  spec.dependency 'RxSwift'
+  spec.dependency 'RxCocoa'
 end
